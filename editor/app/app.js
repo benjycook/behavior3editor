@@ -89,6 +89,9 @@ this.app.dom = this.app.dom || {};
     // // Link selection callbacks
     app.editor.on('blockselect', app.events.onBlockSelect);
     app.editor.on('blockdeselect', app.events.onBlockDeselect);
+	
+	app.helpers.addCustomNode({category:"action",name:"c2Node",title:"Construct 2 Task"});
+	
     // // Populate node list
     app.helpers.updateNodes();
     app.helpers.updateShortcuts();
@@ -97,6 +100,8 @@ this.app.dom = this.app.dom || {};
       app.storage.set('firsttime', false);
       $('#modalFirstTime').foundation('reveal', 'open');
     }
+	
+	
   }
 
   app.initializePlugins = function() {
