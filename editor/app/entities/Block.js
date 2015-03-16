@@ -81,10 +81,26 @@ this.b3editor = this.b3editor || {};
     // Draw shape
     this._shapeObject.graphics.clear();
     shape(this, settings);
+	
 
     // Add to display
     this.displayObject.addChild(this._shapeObject);
     this.displayObject.addChild(this._symbolObject);
+	
+	if(!!app.editor.symbols[name]) {
+		this._textObject = new createjs.Text(
+			this.getTitle(),
+			'18px Arial',
+			'#FFFFFF'
+		);
+		this._textObject.textAlign = 'center';
+		var bounds = this._textObject.getBounds();
+		this._textObject.regY = -bounds.height*1.5;
+		
+		this.displayObject.addChild(this._textObject);
+	}
+	
+	
   }
 
   p.getTitle = function() {
