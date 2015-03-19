@@ -182,6 +182,16 @@ this.app.events = this.app.events || {};
         app.dom.exportEntry.val('');
         var json = app.editor.exportToJSON();
         app.dom.exportEntry.val(json);
+
+
+        var blob = new Blob([json], {type: "application/json"});
+        var url  = URL.createObjectURL(blob);
+
+        var a = document.getElementById('downloadJSON');
+        a.download    = JSON.parse(json).title+".json";
+        a.href        = url;
+
+
         return false;
     }
     /* ========================================================================= */
