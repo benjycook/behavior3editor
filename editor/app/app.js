@@ -66,7 +66,8 @@ this.app.dom = this.app.dom || {};
 
     // static components
     app.dom.exportEntry              = $('#export-entry'); // assigned on the updateNodes
-    app.dom.importEntry              = $('#import-entry'); // assigned on the updateNodes
+    app.dom.importEntry              = $('#uploaded'); // assigned on the updateNodes
+    app.dom.fileUplaod              = $('#fileUplaoded'); // assigned on the updateNodes
     app.dom.addNodeTable             = $('#addnode-table'); // assigned on the updateNodes
     app.dom.editNodeTable            = $('#editnode-table'); // assigned on the updateNodes
   }

@@ -136,7 +136,7 @@ this.b3editor = this.b3editor || {};
   p.importFromJSON = function(json) {
     this.reset();
 
-    var data = JSON.parse(json);
+    var data = json;
     var dataRoot = null;
     var hasDisplay = (data.display)?true:false;
 

@@ -3,11 +3,7 @@
   <h2>Import Tree</h2>
   <a class="close-reveal-modal">&#215;</a>
 
-  <div class="content spacing-bot">
-    <form>
-      <textarea id="import-entry" class="input_textarea" placeholder="Copy your JSON here"></textarea>
-    </form>
-  </div>
+  
 
   <div class="operations">
     <div class="clearfix">
@@ -15,10 +11,13 @@
       <a onclick="app.events.onButtonImportTree(); $('#modalNewTree').foundation('reveal', 'close');" href="#" class="button right small nopadding">Continue</a>
       <a onclick="$('#modalNewTree').foundation('reveal', 'close');" href="#" class="button right secondary small">Cancel</a>
 
-      <a href="#" onclick="$('#import-entry').select();" class="button secondary left small">Select All</a>
+      
 
       <a href="#" onclick="$('#import-entry').val('');" class="button secondary left small">Clear</a>
+
+     <input type="file" id="files" name="files[]" onchange="app.events.onBrowseImport(); $('#modalNewTree').foundation('reveal', 'close');"/>
     </div>
   </div>
 </div>
+
 <!-- END MODAL IMPORT TREE -->
